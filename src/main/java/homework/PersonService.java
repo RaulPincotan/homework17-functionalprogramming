@@ -96,6 +96,12 @@ public class PersonService {
                         .thenComparing(Person::getAge))
                 .collect(Collectors.toList());
     }
+
+    public List<Person> getAllPersons() {
+        return persons.stream()
+                .collect(Collectors.toList());
+    }
+
 }
 
 
